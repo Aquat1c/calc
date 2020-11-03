@@ -6,9 +6,9 @@
 
 using namespace std;
 
-float a, b, c;
+double a, b, c;
 char d;
-int p;
+float p;
 int main()
 {
     SetConsoleOutputCP(1251);
@@ -17,9 +17,16 @@ int main()
     {
         cout << "Будь-яка цифрова клавіша - Калькулятор \n 2 - Вихід \n";
         cin >> p;
-        switch (p)
+
+        if (p == 2)
         {
-        case 1:
+            cout << "Робота з програмою закінчена" << endl;
+
+            break;
+
+        }
+        else
+        
         {
             cout << "Перше число: ";
             cin >> a;
@@ -29,25 +36,18 @@ int main()
             cin >> b;
             if (d == '+')
                 c = a + b;
-            if (d == '-')
+
+            else if (d == '-')
                 c = a - b;
-            if (d == '*')
+            else if (d == '*')
                 c = a * b;
-            if (d == '/')
+            else if (d == '/')
                 c = a / b;
-            if (b == 0 && d == '/')
-                cout << "На 0 ділити не можна." << endl;
-             
-                cout << "Результат =" << c << endl;
+
 
         }
-        case 2:
-        {
-            cout << "Робота з програмою закінчена" << endl;
+        cout << "Результат= " << c << endl;
 
-            break;
-
-        }
         }
     }
-}
+
